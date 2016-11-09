@@ -30,14 +30,12 @@ int main()
 	{
 		cout << *(shapes[i]) << endl;
 		// downcast pointer
-		TwoDimensionalShape *twoDimensionalShapePtr =
-			(shapes[i]); // fix with downcasting
+		TwoDimensionalShape *twoDimensionalShapePtr = dynamic_cast<TwoDimensionalShape*>(shapes[i]); // fix with downcasting
 						 // if Shape is a TwoDimensionalShape, display its area
 		if (twoDimensionalShapePtr != 0)
 			cout << "Area: " << twoDimensionalShapePtr->getArea() << endl;
 		// downcast pointer
-		ThreeDimensionalShape *threeDimensionalShapePtr =
-			(shapes[i]); // fix with downcasting
+		ThreeDimensionalShape *threeDimensionalShapePtr = dynamic_cast<ThreeDimensionalShape*>(shapes[i]); // fix with downcasting
 						 // if Shape is a ThreeDimensionalShape, display its area and volume
 		if (threeDimensionalShapePtr != 0)
 			cout << "Area: " << threeDimensionalShapePtr->getArea()
